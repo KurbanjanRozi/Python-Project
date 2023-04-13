@@ -35,7 +35,7 @@ class TerminalScribe:
         self.canvas = canvas
         self.trail = '*'
         self.mark = '*'
-        self.framerate = 0.05
+        self.framerate = 0.2
         self.pos = [0, 0]
 
     def up(self):
@@ -59,22 +59,22 @@ class TerminalScribe:
             self.draw(pos)
 
     def drawSquare(self, size):
-        i = 0
-        while i < size:
-            self.right()
-            i = i + 1
-        i = 0
-        while i < size:
-            self.down()
-            i = i + 1
-        i = 0
-        while i < size:
-            self.left()
-            i = i + 1
-        i = 0
-        while i < size:
-            self.up()
-            i = i + 1
+            i = 0
+            while i < size:
+                self.right()
+                i = i + 1
+            i = 0
+            while i < size:
+                self.down()
+                i = i + 1
+            i = 0
+            while i < size:
+                self.left()
+                i = i + 1
+            i = 0
+            while i < size:
+                self.up()
+                i = i + 1
 
     def draw(self, pos):
         # Set the old position to the "trail" symbol
@@ -95,4 +95,4 @@ canvas = Canvas(30, 30)
 scribe = TerminalScribe(canvas)
 
 # Draw a small square
-scribe.drawSquare(20)
+scribe.drawSquare()
